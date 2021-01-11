@@ -62,4 +62,46 @@ function colorAll() {
         temp.nextElementSibling.style.backgroundColor = color;
         temp = temp.nextElementSibling;
     }
+    // document.querySelectorAll(".grid-item").style.backgroundColor = color;
+
+    // temp2 = document.querySelector(".grid-container").children;
+    // temp2.style.backgroundColor = color;
 }
+
+function clearAll() {
+    let gridItemsCount = document.querySelectorAll('.grid-item').length;
+    let color = "white";
+    let temp = document.querySelector(".grid-container").firstElementChild;
+    temp.style.backgroundColor = color;
+    for (let i = 0; i < gridItemsCount - 1; i++) {
+        temp.nextElementSibling.style.backgroundColor = color;
+        temp = temp.nextElementSibling;
+    }
+}
+
+let down = false;
+$(document).mousedown(function () {
+    down = true;
+}).mouseup(function () {
+    down = false;
+});
+
+block.addEventListener("mousemove", block => {
+    if (down) {
+        console.log(block)
+        const element = block.srcElement
+        let color = document.getElementById("colorSelect").value
+        element.style.backgroundColor = color
+    }
+})
+
+// LENGTH
+let gridItemsCount = document.querySelectorAll('.grid-item').length;
+console.log(gridItemsCount);
+
+
+// function myFunction() {
+//     document.getElementById("myBtn").addEventListener("click", displayDate);
+// }
+// function myFunction(event) { 
+//     alert(event.target);

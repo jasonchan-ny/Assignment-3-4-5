@@ -47,3 +47,8 @@ function deleteColumn() {
         alert("Can't remove anymore!");
     }
 }
+
+function colorIt(element) {
+    let color = document.getElementById("colorSelect").value;
+    element.style.backgroundColor = color;
+}

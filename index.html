@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h2>
+        <font size="+3">
+            Part 3
+        </font>
+    </h2>
+
+    <div class="buttons">
+        <button onclick="myFunction()">Button1</button>
+        <button onclick="myFunction2()">Button2</button>
+        <p id="output1" id="output2"></p>
+        <p></p>
+    </div>
+
+    <h2>
+        <font size="+3">
+            Part 4
+        </font>
+    </h2>
+
+    <div onmouseover="myAlert()">
+        <button>
+            <font size="+4">
+                Don't hover over me!
+            </font>
+        </button>
+    </div>
+
+    <!-- ALTERNATIVE ALERT
+        <div onmouseover="alert('Why are you hovering over me??')">
+        <button>
+            <font size="+2">Don't hover over me...
+            </font>
+        </button>
+    </div> -->
+
+    <h2>
+        <font size="+3">
+            Part 5
+        </font>
+    </h2>
+
+    <form name="myForm" method="post" onsubmit="return aForm()">
+        <div class="form-group">
+            <label>Your Username</label> <span id="error-username"></span>
+            <input type="text" name="username" class="form-control" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label>Your Password</label> <span id="error-password"></span>
+            <input type="text" name="password" class="form-control" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

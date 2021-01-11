@@ -37,3 +37,13 @@ function deleteRow() {
         deleteCell();
     }
 }
+
+function deleteColumn() {
+    if (columncount > 1) {
+        columns = columns.substr(5);
+        document.getElementById("divgrid").style.gridTemplateColumns = columns;
+        columncount--;
+    } else {
+        alert("Can't remove anymore!");
+    }
+}

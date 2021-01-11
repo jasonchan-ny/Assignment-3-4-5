@@ -52,3 +52,14 @@ function colorIt(element) {
     let color = document.getElementById("colorSelect").value;
     element.style.backgroundColor = color;
 }
+
+function colorAll() {
+    let gridItemsCount = document.querySelectorAll('.grid-item').length;
+    let color = document.getElementById("colorSelect").value;
+    let temp = document.querySelector(".grid-container").firstElementChild;
+    temp.style.backgroundColor = color;
+    for (let i = 0; i < gridItemsCount - 1; i++) {
+        temp.nextElementSibling.style.backgroundColor = color;
+        temp = temp.nextElementSibling;
+    }
+}

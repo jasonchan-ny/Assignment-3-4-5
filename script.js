@@ -20,3 +20,9 @@ function addRow() {
         addCell();
     }
 }
+
+function addColumn() {
+    columns = columns + " auto";
+    document.getElementById("divgrid").style.gridTemplateColumns = columns;
+    columncount++;
+}

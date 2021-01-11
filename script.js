@@ -26,3 +26,14 @@ function addColumn() {
     document.getElementById("divgrid").style.gridTemplateColumns = columns;
     columncount++;
 }
+
+function deleteCell() {
+    let temp = document.querySelector(".grid-container").lastElementChild;
+    temp.remove()
+}
+
+function deleteRow() {
+    for (let i = 0; i < columncount; i++) {
+        deleteCell();
+    }
+}
